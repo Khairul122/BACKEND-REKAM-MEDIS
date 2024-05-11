@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         $users = User::all()->map(function ($user) {
             return [
-                'id_user' => $user->id,
+                'id_user' => $user->id_user,
                 'username' => $user->username,
                 'email' => $user->email,
             ];
@@ -39,7 +39,7 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'username' => 'required|string|max:100',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8'
+            'password' => 'required|string|min:3'
         ]);
 
         $user = User::create([
@@ -87,9 +87,15 @@ class UserController extends Controller
             return response()->json(['message' => 'User not found'], 404);
         }
 
-        $user->username = $request->input('username');
-        $user->email = $request->input('email');
-        $user->password = Hash::make($request->input('password'));
+        $validatedData = $request->validate([
+            'username' => 'required|string|max:100',
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:8'
+        ]);
+
+        $user->username = $validatedData['username'];
+        $user->email = $validatedData['email'];
+        $user->password = Hash::make($validatedData['password']);
         $user->save();
 
         return response()->json([
@@ -113,5 +119,40 @@ class UserController extends Controller
 
         $user->delete();
         return response()->json(['message' => 'User successfully deleted'], 200);
+    }
+
+    /**
+     * Handle user login.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        $user = User::where('email', $credentials['email'])->first();
+
+        if (!$user) {
+            return response()->json([
+                'message' => 'Login failed',
+                'error' => 'No user found with that email address.'
+            ], 404); // Menggunakan status 404 untuk "Not Found"
+        }
+
+        if (!Hash::check($credentials['password'], $user->password)) {
+            return response()->json([
+                'message' => 'Login failed',
+                'error' => 'Incorrect password.'
+            ], 401); // Menggunakan status 401 untuk "Unauthorized"
+        }
+
+        return response()->json([
+            'message' => 'Login successful',
+            'data' => $user
+        ], 200);
     }
 }

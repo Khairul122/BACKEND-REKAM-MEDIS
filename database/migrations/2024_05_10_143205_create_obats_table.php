@@ -17,6 +17,7 @@ class CreateObatsTable extends Migration
             $table->bigIncrements('id_obat');
             $table->string('nama_obat', 200)->nullable(false);
             $table->string('ket_obat')->nullable(false);
+           
         });
     }
 

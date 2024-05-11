@@ -23,10 +23,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Route khusus untuk login
+Route::post('user/login', [UserController::class, 'login']);
+
+// Route resource standar
+Route::apiResource('user', UserController::class);
+
 Route::apiResource('obat', ObatController::class);
 Route::apiResource('pasien', PasienController::class);
-Route::apiResource('user', UserController::class);
 Route::apiResource('rekammedis', RekamMedisController::class);
 Route::apiResource('suratrujukan', SuratRujukanController::class);
-
 
