@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "596201fd-2965-41a1-b5b0-29f1462f8a38",
+		"name": "BACKEND-REKAM-MEDIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21673118",
+		"_collection_link": "https://universal-shadow-720175.postman.co/workspace/TiketBus~ebc8df7a-2260-4b1e-8987-3f60b1846892/collection/21673118-596201fd-2965-41a1-b5b0-29f1462f8a38?action=share&source=collection_link&creator=21673118"
+	},
+	"item": [
+		{
+			"name": "OBAT",
+			"item": [
+				{
+					"name": "MENDAPATKAN SEMUA DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/obat"
+					},
+					"response": []
+				},
+				{
+					"name": "MENDAPATKAN DATA BERDASARKAN ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/obat/1"
+					},
+					"response": []
+				},
+				{
+					"name": "TAMBAHKAN DATA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_obat",
+									"value": "paracetamol",
+									"type": "text"
+								},
+								{
+									"key": "ket_obat",
+									"value": "Pusing",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/obat"
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT DATA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_obat",
+									"value": "OBH",
+									"type": "text"
+								},
+								{
+									"key": "ket_obat",
+									"value": "Batuk",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/obat/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DETELET DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8000/api/obat/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PASIEN",
+			"item": [
+				{
+					"name": "MENDAPATKAN SEMUA DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/pasien"
+					},
+					"response": []
+				},
+				{
+					"name": "MENDAPATKAN DATA BERDASARKAN ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/pasien/1"
+					},
+					"response": []
+				},
+				{
+					"name": "TAMBAHKAN DATA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nomor_identitas",
+									"value": "AA2",
+									"type": "text"
+								},
+								{
+									"key": "nama_pasien",
+									"value": "Budi",
+									"type": "text"
+								},
+								{
+									"key": "jenis_kelamin",
+									"value": "L",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Aceh",
+									"type": "text"
+								},
+								{
+									"key": "no_telp",
+									"value": "082165443677",
+									"type": "text"
+								},
+								{
+									"key": "nik",
+									"value": "137029",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/pasien"
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT DATA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nomor_identitas",
+									"value": "AA4",
+									"type": "text"
+								},
+								{
+									"key": "nama_pasien",
+									"value": "Budi",
+									"type": "text"
+								},
+								{
+									"key": "jenis_kelamin",
+									"value": "L",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Aceh",
+									"type": "text"
+								},
+								{
+									"key": "no_telp",
+									"value": "082165443677",
+									"type": "text"
+								},
+								{
+									"key": "nik",
+									"value": "137029",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/pasien/2"
+					},
+					"response": []
+				},
+				{
+					"name": "DETELET DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8000/api/pasien/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "MENDAPATKAN SEMUA DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/user"
+					},
+					"response": []
+				},
+				{
+					"name": "MENDAPATKAN DATA BERDASARKAN ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "TAMBAHKAN DATA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"newuser\",\r\n  \"email\": \"newuser@example.com\",\r\n  \"password\": \"securepassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/user"
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT DATA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"updateduser1\",\r\n  \"email\": \"updated@example.com\",\r\n  \"password\": \"newpassword1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8000/api/user/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REKAM MEDIS",
+			"item": [
+				{
+					"name": "MENDAPATKAN SEMUA DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/rekammedis"
+					},
+					"response": []
+				},
+				{
+					"name": "MENDAPATKAN DATA BERDASARKAN ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/rekammedis/1"
+					},
+					"response": []
+				},
+				{
+					"name": "TAMBAHKAN DATA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_pasien\": \"1\",\r\n  \"keluhan\": \"Sakit kepala1\",\r\n  \"nama_dokter\": \"Dr. Sehat\",\r\n  \"diagnosa\": \"Migrain\",\r\n  \"tgl_periksa\": \"2024-05-10\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/rekammedis"
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT DATA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_pasien\": \"1\",\r\n  \"keluhan\": \"Sakit perut3\",\r\n  \"nama_dokter\": \"Dr. Sehat\",\r\n  \"diagnosa\": \"Maag\",\r\n  \"tgl_periksa\": \"2024-05-11\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/rekammedis/3"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8000/api/rekammedis/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SURAT RUJUKAN",
+			"item": [
+				{
+					"name": "MENDAPATKAN SEMUA DATA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/rekammedis"
+					},
+					"response": []
+				},
+				{
+					"name": "MENDAPATKAN DATA BERDASARKAN ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/rekammedis/1"
+					},
+					"response": []
+				},
+				{
+					"name": "TAMBAHKAN DATA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomor_surat\": \"SR12345\",\r\n  \"tgl_surat\": \"2024-05-10\",\r\n  \"id_pasien\": 1,\r\n  \"nama_pasien\": \"John Doe\",\r\n  \"usia_pasien\": 30,\r\n  \"jenis_kelamin\": \"L\",\r\n  \"alamat\": \"123 Main St\",\r\n  \"diagnosis\": \"Hipertensi\",\r\n  \"dokter_pengirim\": \"Dr. Sehat\",\r\n  \"catatan\": \"Perlu perawatan lanjutan\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/suratrujukan"
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT DATA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomor_surat\": \"SR123451\",\r\n  \"tgl_surat\": \"2024-05-10\",\r\n  \"id_pasien\": 1,\r\n  \"nama_pasien\": \"John Do1e\",\r\n  \"usia_pasien\": 30,\r\n  \"jenis_kelamin\": \"L\",\r\n  \"alamat\": \"123 Main St1\",\r\n  \"diagnosis\": \"Hipertensi1\",\r\n  \"dokter_pengirim\": \"Dr. Sehat1\",\r\n  \"catatan\": \"Perlu perawatan lanjuta1n\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/suratrujukan/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE DATA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "http://localhost:8000/api/suratrujukan/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
